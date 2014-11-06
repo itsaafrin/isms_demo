@@ -17,7 +17,7 @@ class SMS extends Controller {
     public function postSendSMS(SendSMSFormRequest $request){
         
         ISMS::SendSMS(Input::get('message_recipient'), Input::get('message_content'), Input::get('message_type'));
-        return view('send_sms')->with('success', 'SMS Sent Successfully');;
+        return view('send_sms')->with('success', 'SMS Sent Successfully');
     }
 
 }
